@@ -1,0 +1,32 @@
+# Ignore Python cache
+__pycache__/
+*.pyc
+
+# Ignore virtual environments
+venv/
+.env/
+
+# Ignore database files
+chrome_langchain_db/
+*.db
+
+# Ignore CSV backups or temp files
+*.csv~
+*.bak
+
+# Ignore OS files
+.DS_Store
+Thumbs.db
+
+# Ignore Gradio temporary files
+gradio_cached_examples/
+
+# Ignore any ollama temp files if generated
+ollama_temp/
+
+# Ignore Docker build artifacts
+*.log
+*.pid
+*.sock
+*.tar
+*.out
