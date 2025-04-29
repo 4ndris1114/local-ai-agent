@@ -5,7 +5,11 @@ from vector import retriever
 import gradio as gr
 
 # Load the local Ollama model
-model = OllamaLLM(model="llama3.2")
+model = OllamaLLM(
+    model="llama3.2",
+    base_url="http://ollama:11434"
+)
+
 
 # Set up the prompt
 template = """
