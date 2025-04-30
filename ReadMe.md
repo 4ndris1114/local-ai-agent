@@ -1,6 +1,6 @@
-# 🧓 Granny's Life Advice Hotline
+# 🍕 THE pizza restaurant
 
-Welcome to the **Granny's Life Advice Hotline** — a funny little AI demo where a wise grandma answers all your life's biggest (or silliest) questions.
+Welcome to the **THE pizza restaurant** — a local AI who answers all your questions regarding its pizza restaurant.
 
 This project uses:
 - 🧠 Local AI with [Ollama](https://ollama.com/)
