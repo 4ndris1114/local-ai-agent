@@ -7,9 +7,8 @@ import gradio as gr
 # Load the local Ollama model
 model = OllamaLLM(
     model="llama3.2",
-    base_url="http://ollama:11434"
+    
 )
-
 
 # Set up the prompt
 template = """
@@ -20,10 +19,11 @@ Here are some relevant reviews: {reviews}
 Here is the question to answer: {question}
 """
 
+# Create the prompt template and chain
 prompt = ChatPromptTemplate.from_template(template)
 chain = prompt | model
 
-# Gradio function
+# Function to answer questions
 def answer_question(question):
     if question.lower() == "q":
         return "Goodbye!"
