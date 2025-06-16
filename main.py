@@ -10,27 +10,23 @@ model = OllamaLLM(model="llama3.2")
 # Global state
 uploaded_df = None
 uploaded_data = []
-user_prompt_template = None
+user_prompt_template = ChatPromptTemplate.from_template(
+    "Use the following structured data to answer the question.\n\nData:\n{data}\n\nQuestion:\n{question}"
+)
 
 # Upload CSV
 def upload_csv(file):
-    global uploaded_df
+    global uploaded_df, uploaded_data
     if file is None:
-        return gr.update(choices=[], visible=False), "Please upload a valid CSV file."
+        return "Please upload a valid CSV file."
     try:
         uploaded_df = pd.read_csv(file.name)
-        columns = uploaded_df.columns.tolist()
-        return gr.update(choices=columns, visible=True), "CSV uploaded! Select the column with text."
+        uploaded_data = uploaded_df.astype(str).apply(
+            lambda row: ", ".join(f"{col}: {val}" for col, val in row.items()), axis=1
+        ).tolist()
+        return f"CSV uploaded with {len(uploaded_data)} rows!"
     except Exception as e:
-        return gr.update(choices=[], visible=False), f"Error reading CSV: {str(e)}"
-
-# Select column
-def set_data_column(column_name):
-    global uploaded_data, uploaded_df
-    if column_name not in uploaded_df.columns:
-        return "Column not found."
-    uploaded_data = uploaded_df[column_name].dropna().astype(str).tolist()
-    return f"Column '{column_name}' selected with {len(uploaded_data)} entries."
+        return f"Error reading CSV: {str(e)}"
 
 # Set user-defined prompt
 def set_prompt(prompt_text):
@@ -39,18 +35,18 @@ def set_prompt(prompt_text):
         return "Prompt must include both '{data}' and '{question}'."
     try:
         user_prompt_template = ChatPromptTemplate.from_template(prompt_text)
-        return "Prompt template set successfully!"
+        return "Prompt template updated successfully!"
     except Exception as e:
         return f"Error in prompt template: {str(e)}"
 
 # Answer question using uploaded data and prompt
 def answer_question_with_uploaded_data(question):
     if not uploaded_data:
-        return "Please upload and select a column first."
+        return "Please upload a CSV file first."
     if user_prompt_template is None:
-        return "Please set a valid prompt template first."
+        return "Prompt template is missing or invalid."
     
-    data_text = "\n".join(uploaded_data[:20])  # limit for performance
+    data_text = "\n".join(uploaded_data[:20])  # Limit for performance
     chain = user_prompt_template | model
     result = chain.invoke({"data": data_text, "question": question})
     return result
@@ -60,9 +56,8 @@ with gr.Blocks(theme="soft") as app:
     gr.Markdown("## Custom CSV AI Assistant")
     gr.Markdown("""
     1. Upload your CSV file  
-    2. Choose the column with text data  
-    3. Write a custom prompt using `{data}` and `{question}`  
-    4. Ask your question!
+    2. Review or edit the prompt using `{data}` and `{question}`  
+    3. Ask your question!
     """)
 
     with gr.Row():
@@ -70,19 +65,20 @@ with gr.Blocks(theme="soft") as app:
         upload_output = gr.Textbox(label="Upload Status", interactive=False)
     upload_button = gr.Button("Upload CSV")
 
-    column_dropdown = gr.Dropdown(label="Select Text Column", choices=[], visible=False)
-    column_status = gr.Textbox(label="Column Status", interactive=False)
-
-    prompt_input = gr.Textbox(label="Custom Prompt", lines=5, placeholder="E.g., Use the following data to answer the question:\n\nData:{data}\n\nQuestion: {question}")
-    prompt_status = gr.Textbox(label="Prompt Status", interactive=False)
+    default_prompt = (
+        "Use the following structured data to answer the question.\n\n"
+        "Data:\n{data}\n\n"
+        "Question:\n{question}"
+    )
+    prompt_input = gr.Textbox(
+        label="Custom Prompt", lines=6, value=default_prompt
+    )
+    prompt_status = gr.Textbox(label="Prompt Status", value="Prompt template is ready!", interactive=False)
 
     question_input = gr.Textbox(label="Your Question", lines=2)
     answer_output = gr.Textbox(label="AI Answer")
 
-    upload_button.click(upload_csv, inputs=file_input, outputs=[column_dropdown, upload_output])
-
-    column_dropdown.change(set_data_column, inputs=column_dropdown, outputs=column_status)
-
+    upload_button.click(upload_csv, inputs=file_input, outputs=upload_output)
     prompt_input.change(set_prompt, inputs=prompt_input, outputs=prompt_status)
 
     ask_button = gr.Button("Ask AI")
