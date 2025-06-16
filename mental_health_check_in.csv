@@ -1,0 +1,21 @@
+Date,User_ID,Mood,Sleep_Hours,Stress_Level,Exercise_Duration_Min,Journal_Entry_Summary
+2025-06-01,U001,6,7,Medium,30,Felt a bit anxious in the morning, calmed down after walk.
+2025-06-02,U001,7,8,Low,15,Better sleep helped, work was manageable.
+2025-06-03,U001,5,5,High,0,Overwhelmed with deadlines, no time to relax.
+2025-06-04,U001,8,9,Low,45,Felt productive, long bike ride helped mood.
+2025-06-05,U001,4,6,High,0,Arguments at home affected focus.
+2025-06-06,U001,6,7,Medium,20,Fair day, meditation helped a little.
+2025-06-07,U001,9,8,Low,60,Had a fun day outdoors with friends.
+2025-06-08,U001,5,4,High,0,Poor sleep and stressful meeting.
+2025-06-09,U001,7,8,Low,30,Cooked a new recipe and took a walk.
+2025-06-10,U001,6,6,Medium,10,Slow start but ended okay.
+2025-06-11,U001,8,9,Low,40,Very relaxed, slept really well.
+2025-06-12,U001,3,5,High,0,Felt irritable most of the day.
+2025-06-13,U001,6,7,Medium,25,Average day, nothing major.
+2025-06-14,U001,7,8,Low,30,Felt focused and energized.
+2025-06-15,U001,5,6,Medium,15,Slightly stressed but managed it.
+2025-06-16,U001,9,9,Low,50,Excellent mood after nature hike.
+2025-06-17,U001,4,5,High,0,Bad traffic and noisy neighbors.
+2025-06-18,U001,6,6,Medium,20,Calmed down with yoga.
+2025-06-19,U001,8,8,Low,35,Good conversation lifted my spirits.
+2025-06-20,U001,7,7,Low,30,Steady day, nice rhythm.

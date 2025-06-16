@@ -1,0 +1,21 @@
+Product_ID,Product_Name,Category,Stock_Level,Reorder_Threshold,Price_EUR,Supplier
+1001,Wireless Mouse,Electronics,25,10,15.99,TechWorld
+1002,Laptop Stand,Accessories,12,5,24.50,ErgoSupply
+1003,USB-C Hub,Electronics,7,10,19.99,TechWorld
+1004,Notebook A5,Stationery,48,20,3.45,PaperHeaven
+1005,Bamboo Pen,Stationery,15,10,2.99,PaperHeaven
+1006,Noise-Cancelling Headphones,Electronics,5,3,79.99,SoundWorks
+1007,Coffee Mug 350ml,Homeware,30,15,6.90,CasaBasics
+1008,Desk Lamp,Lighting,9,5,22.00,LumaTech
+1009,Portable SSD 1TB,Electronics,3,5,89.99,DataVault
+1010,LED Strip Lights,Lighting,20,10,12.49,LumaTech
+1011,Blue Light Glasses,Accessories,18,8,14.99,Visionary
+1012,Smartwatch,Electronics,2,2,99.00,TechWorld
+1013,Tote Bag Canvas,Accessories,26,15,7.75,BagCo
+1014,Standing Desk Mat,Accessories,10,5,29.00,ErgoSupply
+1015,Planner 2025,Stationery,35,15,5.99,PaperHeaven
+1016,Cable Organizer,Accessories,22,10,4.50,CablePro
+1017,Keyboard Mechanical,Electronics,6,3,59.95,KeyMasters
+1018,Mini Whiteboard,Stationery,17,8,9.90,PaperHeaven
+1019,Travel Adapter,Electronics,11,5,13.25,WorldPlug
+1020,Laptop Sleeve 15",Accessories,14,6,18.00,BagCo

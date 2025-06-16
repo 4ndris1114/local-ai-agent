@@ -1,0 +1,21 @@
+Date,Appliance,Usage_kWh,Room,Duration_minutes,Notes
+2025-05-01,Washing Machine,1.2,Laundry Room,45,Weekly laundry
+2025-05-01,Air Conditioner,3.8,Living Room,120,Hot afternoon
+2025-05-01,Oven,2.5,Kitchen,60,Baked lasagna
+2025-05-02,Television,0.6,Living Room,90,Evening news & Netflix
+2025-05-02,Dishwasher,1.4,Kitchen,70,Full load
+2025-05-02,Microwave,0.2,Kitchen,5,Heated leftovers
+2025-05-03,Hair Dryer,0.15,Bathroom,10,Morning routine
+2025-05-03,Laptop,0.5,Office,180,Work from home
+2025-05-03,Heater,4.0,Bedroom,240,Cold night
+2025-05-04,Toaster,0.1,Kitchen,3,Toast for breakfast
+2025-05-04,Coffee Maker,0.3,Kitchen,10,Morning coffee
+2025-05-04,Air Purifier,0.9,Bedroom,180,Allergy season
+2025-05-05,Vacuum Cleaner,1.0,Hallway,30,Spring cleaning
+2025-05-05,Laptop,0.6,Office,240,Video editing
+2025-05-05,TV,0.4,Bedroom,60,Watched documentary
+2025-05-06,Oven,2.8,Kitchen,90,Roasted chicken
+2025-05-06,Washing Machine,1.1,Laundry Room,40,Quick cycle
+2025-05-06,Heater,3.5,Bathroom,180,Pre-warm
+2025-05-07,Game Console,0.9,Living Room,120,Multiplayer session
+2025-05-07,Air Conditioner,3.0,Living Room,90,Evening use

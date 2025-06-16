@@ -1,0 +1,21 @@
+Vehicle_ID,Date,Odometer_km,Service_Type,Mechanic_Notes,Next_Service_Due_km,Urgency_Level
+TRK101,2025-03-01,154320,Oil Change,Oil was very dark, replaced filter.,159000,Medium
+TRK102,2025-03-03,87210,Brake Inspection,Rear pads will need replacing soon.,90000,Medium
+VAN204,2025-03-05,43200,Tire Rotation,Front tires uneven wear, rotated.,48200,Low
+TRK101,2025-03-08,156000,Battery Check,Battery tested OK, no action needed.,181000,Low
+TRK103,2025-03-09,124500,Oil Change,Performed as scheduled.,129000,Low
+TRK102,2025-03-12,89000,Brake Replacement,Rear brake pads replaced.,95000,High
+VAN204,2025-03-14,45000,Fluid Top-Up,Power steering fluid low, topped up.,50000,Low
+TRK101,2025-03-17,158200,AC Service,Compressor noisy, minor leak found.,178000,Medium
+TRK103,2025-03-20,126900,Transmission Check,Fluid levels good, no issues.,151900,Low
+TRK102,2025-03-22,91000,Alignment Check,Truck pulling slightly right, adjusted.,95000,Medium
+VAN204,2025-03-24,47500,Brake Inspection,Front brakes fine, rear 60% wear.,52500,Low
+TRK101,2025-03-26,160100,Oil Change,On schedule, everything routine.,165000,Low
+TRK103,2025-03-28,128000,Lighting Check,Left indicator bulb replaced.,155000,Low
+TRK102,2025-03-30,93000,Engine Diagnostic,Minor misfire, spark plug replaced.,98000,High
+VAN204,2025-04-01,49200,AC Service,Blower fan cleaned.,54000,Low
+TRK101,2025-04-04,162000,Tire Replacement,Rear tires worn out, replaced.,195000,High
+TRK103,2025-04-07,129500,Fluid Top-Up,Coolant added, small leak observed.,154500,Medium
+TRK102,2025-04-09,95000,Oil Change,Regular interval, no concerns.,100000,Low
+VAN204,2025-04-11,51000,Battery Check,Battery voltage low, replaced.,61000,High
+TRK101,2025-04-13,164500,Brake Replacement,Front pads and rotors replaced.,195000,High
